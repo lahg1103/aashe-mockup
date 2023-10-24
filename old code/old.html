@@ -1,0 +1,157 @@
+<DOCTYPE! html>
+<html lang="en">
+    <head>
+        <title>mockup AASHE</title>
+        <link rel="stylesheet" href="old.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" class="logo">
+                <div class="logo-text">
+                    <div class="utrgv-text-logo">
+                        The University of Texas Rio Grande Valley
+                    </div>
+                    <h1 class="OFS-text-logo">
+                        Office for Sustainability
+                    </h1>
+                    <div class="division-text-logo">
+                        <a href="">Division of Facilities Plannning and Operations</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-button-container">
+                <a href=""><button class="nav-button orange pointer">Give</button></a>
+                <a href=""><button class="nav-button blue pointer">Apply</button></a>
+                <div class="hamburger-menu-container">
+                    <button class="nav-button pointer"></button>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="banner-container">
+                <img src="aashe-banner.png">
+            </div>
+            <article>
+                <h2>UTRGV Strikes Gold for Excellence in Sustainability</h2>
+                <div class="banner-container">
+                    <img src="gold-banner.png">
+                </div>
+                <p>The University of Texas Rio Grande Valley is the first in the UT System and one of only three universities in Texas to earn AASHE STARS “Gold” status for its sustainability initiatives.
+                    <a href="">Read more here</a>.
+                </p>
+                <p>STARS provides positive, public recognition - each level of recognition represents significant sustainability leadership. Participating in STARS, which includes gathering extensive data and sharing it publicly, represents a commitment to sustainability that should be applauded.</p>
+                <p>The AASHE STARS framework creates wide-ranging, cross-disciplinary initiatives infusing sustainable development, and underscores our institution&#x2019s positive contributions in protecting the well-being for our institution and region.  Every two years, UTRGV completes a university-wide assessment of sustainable development across the campus.  We do this by survey and interviews, gather pertinent data and metrics to provide a full picture of the progress that our institution has made since the last assessment.  A team of research assistants through the Office for Sustainability gathers this information.</p>
+                <p>Not only will this collection of information and data help with the AASHE STARS Assessment, but it will also help build sustainable development into every fiber of our campus and community.  It provides us with a platform of information to build our Campus Sustainability Action Plan which supports UTRGV's mission and strategic plan to transform the Rio Grande Valley, the Americas, and the world through an innovative and accessible educational environment.</p>
+            </article>
+            <div id="timeline-container">
+                <div class="dates-container">
+                    <ul class="dates white">
+                        <li class="date">2015</li>
+                        <li class="date">2017</li>
+                        <li class="date">2023</li>
+                    </ul>
+                </div>
+                <div class="divisor"></div>
+                <div class="carousel-container">
+                <button id="left" class="rating-button white ico pointer"> &#11164; </button>
+                <div class="rating-container">
+                    <div id="2015" class="rating-text">
+                        <h3 class="white">UTRGV's 2015 Sustainability Report</h3>
+                        <p class="white">STARS version 2.0</p>
+                        <img src="AASHE-SILVER.png" class="rating">
+                        <p class="white">View the <a href="" class="light-link">UTRGV 2015 Sustainability Report</a>.</p>
+                    </div>
+                    <div id="2017" class="rating-text">
+                        <h3 class="white">UTRGV's 2017 Sustainability Report</h3>
+                        <p class="white">STARS version 2.0</p>
+                        <img src="AASHE-GOLD.png" class="rating" >
+                        <p class="white">View the <a href="" class="light-link">UTRGV 2017 Sustainability Report</a>.</p>
+                    </div>
+
+                    <div id="2023" class="rating-text">
+                        <h3 class="white">UTRGV's 2023 Sustainability Report</h3>
+                        <p class="white">STARS version 2.2</p>
+                        <img src="AASHE-GOLD.png" class="rating" >
+                        <p class="white">View the <a href="" class="light-link">UTRGV 2023 Sustainability Report</a>.</p>
+                    </div>
+                </div>
+                <button id="right" class="rating-button white ico pointer"> &#11166; </button>
+                </div>
+            </div>
+            <hr>
+            <article>
+                <h3>STARS Overview</h3>
+                <p>The Sustainability Tracking, Assessment & Rating System™ (STARS ®) is a transparent, intensive, self-reporting framework for colleges and universities to measure their sustainability performance. STARS is intended to engage and recognize the full spectrum of colleges and universities—from community colleges to research universities, and from institutions just starting their sustainability programs to long-time campus sustainability leaders. STARS encompasses long-term sustainability goals for already high-achieving institutions as well as entry points of recognition for institutions that are taking first steps toward sustainability.</p>
+                <p>STARS is designed to:</p>
+                <ul>
+                    <li>Provide a framework for  understanding sustainability  in all sectors of higher education.</li>
+                    <li>Enable meaningful comparisons over time and across institutions using a common set of measurements developed with broad participation from the international campus sustainability community.</li>
+                    <li>Create incentives for continual improvement toward sustainability.</li>
+                    <li>Facilitate information sharing about higher education sustainability practices and performance.</li>
+                    <li>Build a stronger, more diverse campus sustainability community.</li>
+                </ul>
+                <p>For more information, please go to the <a href="">AASHE website</a>.</p>
+            </article>
+        </main>
+        <script>
+            function changeSlide(buttonID) {
+                for (const rating of ratingText) {
+                rating.classList.add('hide');
+            }
+                for (const year of date) {
+                year.classList.remove('active-date');
+                year.classList.add('inactive-date');
+            }
+                if (buttonID == "right") {
+                    if (index < date.length-1) {
+                    index++;
+                    ratingText[index].classList.remove('hide');
+                    date[index].classList.add('active-date');
+                    }
+                    else {
+                        index=0;
+                        ratingText[index].classList.remove('hide');
+                        date[index].classList.add('active-date');
+                    }
+                }
+                else {
+                    if (index > 0) {
+                        index--;
+                        ratingText[index].classList.remove('hide');
+                        date[index].classList.add('active-date');
+                    }
+                    else {
+                        index = date.length - 1;
+                        ratingText[index].classList.remove('hide');
+                        date[index].classList.add('active-date');
+                    }
+                }
+            }
+            // default
+            
+            let ratingText = document.getElementsByClassName('rating-text');
+            for (const rating of ratingText) {
+                rating.classList.add('hide');
+            }
+            ratingText[ratingText.length-1].classList.remove('hide');
+            let date = document.getElementsByClassName('date');
+            for (const year of date) {
+                year.classList.add('inactive-date');
+            }
+            date[date.length-1].classList.add('active-date');
+            var index = date.length - 1;
+
+            let carouselButton = document.getElementsByClassName('rating-button');
+            for (const button of carouselButton) {
+                button.addEventListener('click', e => {
+                    changeSlide(button.getAttribute('id'));
+                });
+            }
+            
+        </script>
+    </body>
+</html>

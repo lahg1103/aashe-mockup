@@ -1,0 +1,297 @@
+/* typography */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Open+Sans:wght@400;600&family=Raleway:wght@800&display=swap');
+.subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.93rem;
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+}
+h1 { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.3rem;
+}
+
+
+/* general */
+:root {
+    --default-white: #FFFFFF;
+    --deep-grey : #4C4A4F;
+    --text-black : #212529;
+    --link-blue : #0F549B;
+    --light-blue : #629fdc;
+    --action-orange : #CB4900;
+    --info-blue : #00216E;
+    --border-grey : #ededed;
+    --softshadow: 0px 2px 20px -10px rgba(0,0,0,0.5);
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+body {
+    line-height: 1.5;
+    overflow-x: hidden;
+    font-family: 'open sans', sans-serif;
+    color: var(--text-black);
+    background-color: var(--default-white);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 1.1rem;
+}
+article {
+    margin: 4rem 0;
+}
+main {
+    padding: 4% 4%;
+}
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+}
+a, a:visited, a:active {
+    color: inherit;
+}
+a:hover, button:hover {
+    cursor:pointer;
+}
+
+
+.animate-link {
+    position: relative;
+}
+.animate-link:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--default-white);
+    transition: 300ms;
+}
+.animate-link:hover:after {
+    width: 100%;
+}
+.animate-link:not(:hover):after {
+    right: 0;
+    left: auto;
+}
+.center {
+    text-align: center;
+}
+.soft-shadow {
+    box-shadow: var(--softshadow);
+}
+.border {
+    border: 1px solid var(--border-grey);
+}
+.border-bottom {
+    border-bottom: 1px solid var(--border-grey);
+}
+.full-w {
+    width: 100%;
+}
+.full-h {
+    height: 100vh;
+}
+.h-100 {
+    height: 100%;
+}
+.white-text {
+    color: var(--default-white);
+}
+.orange {
+    background-color: var(--action-orange);
+}
+.blue {
+    background-color: var(--info-blue);
+}
+.link-blue {
+    color: var(--link-blue) !important;
+}
+.round-top {
+    border-radius: 8px 8px 2px 2px;
+}
+.round {
+    border-radius: 8px;
+}
+.card {
+    border-radius: 12px;
+}
+.no-bullet {
+    list-style: none;
+}
+.flex {
+    display: flex;
+}
+
+hr {
+    border-top: 1px solid var(--deep-grey);
+}
+
+/* nav */
+nav {
+    background-color: var(--deep-grey);
+    justify-content: space-between;
+}
+nav ul {
+    align-self: center;
+    gap: 10px;
+}
+
+.logo-container {
+    flex: 1;
+    align-items: center;
+    padding: 16px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    background-color: var(--default-white);
+    width: 35%;
+    min-width: 155px;
+    max-width: 200px;
+}
+.logo {
+    min-width: 100px;
+    max-width: 150px;
+    width: 50%;
+}
+.nav-button {
+    height: 100%;
+    width: 100%;
+    min-width: 32px;
+    max-width: 48px;
+}
+
+
+/* landing */
+#landing {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "stack";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.overlay {
+    grid-area: stack;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    mix-blend-mode: multiply;
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.9) 60%, rgba(0, 0, 0, 0.3));
+}
+
+.text-logo-container {
+    grid-area: stack;
+    z-index: 2;
+    align-self: center;
+    padding-left: 2%;
+    animation: slideUp 1300ms ease-in-out forwards;
+}
+
+.campus-img {
+    grid-area: stack;
+    object-fit: cover; 
+    position: relative;
+    z-index: 0;
+}
+
+.uni-logo {
+    font-size: 1rem;
+}
+.office-logo {
+    font-size: 2.5rem;
+}
+.division-logo {
+    font-size: 1rem;
+}
+.division-logo a {
+    text-decoration-color: var(--light-blue) !important;
+}
+
+/* main */
+.aashe-stars {
+    flex-direction: column;
+    justify-content: space-between;
+}
+#stars-overview p {
+    margin: 1rem 0;
+}
+#connect p {
+    margin: 1.5rem 0 2rem 0;
+}
+.connect {
+    width: 75%;
+    height: 3rem;
+}
+
+/* timeline */
+#carousel-container {
+    position: relative;
+    margin: 16px 0px;
+    padding: 32px 0px;
+}
+#carousel-container::before, #carousel-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
+}
+#carousel-container::before {
+    opacity: 60%;
+    background-color: #000;
+}
+#carousel-container::after {
+    background-image: url("assets/utrgv-brownsville.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 75%;
+}
+.dates-container ul {
+    justify-content: space-around;
+}
+
+/* footer */
+#office-info {
+    background-color: var(--border-grey);
+    margin-bottom: 0;
+}
+#office-info h1 {
+    font-family: 'open sans', sans-serif;
+}
+.office-info h1 {
+    font-size: 1.1rem;
+    font-family: 'open sans', sans-serif !important;
+}
+footer {
+    background-color: var(--deep-grey);
+    padding: 1rem;
+}
+
+/* animations */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+    }
+}

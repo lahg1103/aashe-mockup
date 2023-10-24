@@ -1,0 +1,316 @@
+:root {
+    --default-white: #FFFFFF;
+    --deep-grey : #4C4A4F;
+    --text-black : #212529;
+    --link-blue : #0F549B;
+    --action-orange : #CB4900;
+    --info-blue : #00216E;
+    --border-grey : #ededed;
+
+    --spacing-unit: 8px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--default-white);
+    color: var(--text-black);
+    font-size: 1.1rem;
+    line-height: 1.5;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    text-align: left;
+    font-family: 'roboto', 'helvetica nueue', sans-serif;
+    font-weight: 400;
+}
+
+.spacing-1x { margin: calc(var(--spacing-unit) * 1); }
+.spacing-2x { margin: calc(var(--spacing-unit) * 2); }
+.spacing-3x { margin: calc(var(--spacing-unit) * 3); }
+.spacing-4x { margin: calc(var(--spacing-unit) * 4); }
+.spacing-5x { margin: calc(var(--spacing-unit) * 5); }
+.spacing-6x { margin: calc(var(--spacing-unit) * 6); }
+.spacing-7x { margin: calc(var(--spacing-unit) * 7); }
+.spacing-8x { margin: calc(var(--spacing-unit) * 8); }
+
+.pad-1x { padding: calc(var(--spacing-unit) * 1); }
+.pad-2x { padding: calc(var(--spacing-unit) * 2); }
+.pad-3x { padding: calc(var(--spacing-unit) * 3); }
+.pad-4x { padding: calc(var(--spacing-unit) * 4); }
+
+
+button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+h1,h2,h3 {
+    font-family: "Raleway", sans-serif;
+}
+a, a:visited, a:active {
+    color: var(--link-blue);
+}
+
+.orange {
+    background-color: var(--action-orange);
+}
+.blue {
+    background-color: var(--info-blue);
+}
+.dark-background {
+    background-color: var(--deep-grey);
+}
+.white-text {
+    color: var(--default-white);
+}
+.blue-text {
+    color: var(--info-blue);
+}
+.orange-text {
+    color: var(--action-orange);
+}
+.light-link {
+    color: #95C9FF;
+}
+
+.contain {
+    max-width: 100%;
+}
+.pointer {
+    cursor: pointer;
+}
+.card {
+    border-radius: 12px;
+}
+.card-button {
+    border-radius: 8px;
+}
+.flex {
+    display: flex;
+}
+.bottom-border {
+    border-bottom: 1px solid var(--border-grey);
+}
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; 
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/* navigation */
+nav {
+    padding: 0px 16px 0px 0px;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: var(--deep-grey);
+}
+.nav-links {
+    align-self: center;
+    list-style: none;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 1rem;
+    display: none;
+}
+
+.logo-container {
+    flex: 1;
+    align-items: center;
+    padding: 16px;
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+    background-color: var(--default-white);
+    max-width: 550px;
+}
+.logo {
+    min-width: 100px;
+    max-width: 150px;
+    width: 50%;
+    border-right: 1px solid var(--text-black);
+}
+.logo-text-container {
+    padding: 0px 0px 0px 8px;
+}
+.logo-text-container h3 {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.logo-text-container h1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nav-button-container .white-text {
+    width: 64px;
+}
+#hamburger-menu {
+    margin: 0px 0px 0px 16px;
+    background-image: url("assets/hamburger-icon.svg");
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+}
+
+/* main */
+.logo-text-main {
+    display: none;
+}
+
+#connect {
+    display: flex;
+    flex-direction: column;
+}
+#connect p {
+    margin-bottom: 16px;
+}
+#connect button {
+    font-size: 1.1rem;
+    width: 66%;
+    align-self: center;
+}
+
+
+
+
+
+/* timeline */
+#timeline-container {
+    position: relative;
+    margin: 16px 0px;
+    padding: 32px 8px;
+}
+#timeline-container::before, #timeline-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
+}
+#timeline-container::before {
+    opacity: 60%;
+    background-color: #000;
+}
+#timeline-container::after {
+    background-image: url('assets/utrgv-green.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 75%;
+}
+.ico {
+    font-size: 2.25rem;
+}
+.date {
+    position: relative;
+}
+.date.active:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--default-white);
+    transition: 300ms;
+}
+.date.active:hover:after {
+    width: 100%;
+}
+.date.active:not(:hover):after {
+    right: 0;
+    left: auto;
+}
+.dates {
+    display: inline-flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#slideshow-container {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.slide {
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+    transform: translateX(0%);
+    transition: transform 0.45s ease-in-out;
+    text-align: center;
+}
+.slide.hide {
+    transform: translateX(-100%);
+}
+.slide.hide-l {
+    transform: translateX(100%);
+}
+
+/* media queries */
+@media screen and (max-width: 753px) {
+    .logo-text-main {
+        display: block;
+    }
+    .logo-text-main h3 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .logo-text-main h1 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo-container {
+        width: 100px;
+        max-width: 35%;
+    }
+    .logo {
+        border: none;
+    }
+    .logo-text-container {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px; 
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+    }
+}
+@media screen and (min-width: 754px) {
+    /* side-by-side */
+    .side-by-side {
+        display: flex;
+        justify-content: space-around;
+        gap: 24px;
+    }
+    #connect { 
+        align-self: center;
+    }
+    #connect button {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+    .nav-button-container {
+        margin-left: 16px;
+        margin-bottom: 16px;
+    }
+}
