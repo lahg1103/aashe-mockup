@@ -120,6 +120,9 @@ a:hover, button:hover {
 .card {
     border-radius: 12px;
 }
+.hexagon {
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
 .no-bullet {
     list-style: none;
 }
@@ -242,6 +245,7 @@ nav ul {
     position: relative;
     margin: 16px 0px;
     padding: 32px 0px;
+    justify-content: space-between;
 }
 #carousel-container::before, #carousel-container::after {
     content: "";
@@ -267,11 +271,22 @@ nav ul {
 .dates-container ul {
     justify-content: space-around;
 }
+.ico {
+    font-size: 2rem;
+    font-weight: 600;
+}
 
 /* footer */
 #office-info {
     background-color: var(--border-grey);
     margin-bottom: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#office-info h3 {
+    width: 100%;
+    border-bottom: 1px solid var(--deep-grey);
 }
 #office-info h1 {
     font-family: 'open sans', sans-serif;
