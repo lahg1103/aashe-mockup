@@ -1,0 +1,165 @@
+@import url("typography.css");
+@import url("animations.css");
+
+/* colors for the page */
+:root {
+    --default-white: #FFFFFF;
+    --dark-grey : #4C4A4F;
+    --default-black : #212529;
+    --link-blue : #0F549B;
+    --light-blue : #629fdc;
+    --utrgv-orange : #CB4900;
+    --info-blue : #00216E;
+    --border-grey : #ededed;
+    --soft-shadow: 0px 2px 20px -10px rgba(0,0,0,0.5);
+}
+
+/* spacing */
+*, *::before, *::after {
+    /* this will override default browser styles */
+    padding: 0;
+    margin: 0;
+}
+article {
+    margin: 4rem 0;
+}
+main {
+    padding: 4% 4%;
+}
+p {
+    margin: 1.5rem 0 2rem 0;
+}
+
+.flex {
+    /* displays items in rows */
+    display: flex;
+}
+.center-text {
+    text-align: center;
+}
+.gap-1x {
+    gap: 8px;
+}
+.pad-1x {
+    padding: 16px;
+}
+.pad-2x {
+    padding: 32px;
+}
+.margin-1x {
+    margin: 16px;
+}
+.margin-2x {
+    margin: 32px;
+}
+.pad-horizontal-1x {
+    padding: 0 16px;
+}
+.pad-horizontal-2x {
+    padding: 0 32px;
+}
+.pad-vertical-1x {
+    padding: 16px 0;
+}
+.pad-vertical-2x {
+    padding: 32px 0;
+}
+.margin-vertical-1x {
+    margin: 16px 0;
+}
+.margin-vertical-2x {
+    margin: 32px 0;
+}
+
+/* this will center items with flex class */
+.self-center-vertical {
+    align-self: center;
+}
+.self-center-horizontal {
+    justify-self: center;
+}
+.center-horizontal {
+    justify-content: center;
+}
+.center-vertical {
+    align-items: center;
+}
+.space-between {
+    justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
+}
+
+/* general page, to override default browser styles */
+body {
+    overflow-x: hidden;
+    color: var(--text-black);
+    background-color: var(--default-white);
+    box-sizing: border-box;
+}
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+}
+a, a:visited, a:active {
+    color: inherit;
+}
+a:hover, button:hover {
+    cursor:pointer;
+}
+
+/* stylistic changes */
+/* colors TEXT */
+.white-text {
+    color: var(--default-white);
+}
+.blue-text {
+    color: var(--link-blue) !important;
+}
+
+/* colors BACKGROUND */
+.orange-background {
+    background-color: var(--action-orange);
+}
+.blue-background {
+    background-color: var(--info-blue);
+}
+.grey-background {
+    background-color: var(--dark-grey);
+}
+.white-background {
+    background-color: var(--default-white);
+}
+
+/* frames */
+.hexagon {
+    clip-path: polygon(0 50%, 25% 100%, 75% 100%, 100% 50%, 75% 0, 25% 0);
+}
+.slash {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+
+/* shadow */
+.soft-shadow {
+    box-shadow: var(--softshadow);
+}
+
+/* list */
+.no-bullet {
+    list-style: none;
+}
+
+/* logo */
+.logo-container {
+    flex: 1;
+    width: 35%;
+    min-width: 155px;
+    max-width: 200px;
+}
+.logo {
+    min-width: 100px;
+    max-width: 150px;
+    width: 50%;
+}

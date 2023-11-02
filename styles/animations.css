@@ -1,0 +1,29 @@
+.animate-link {
+    position: relative;
+}
+.animate-link:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--default-white);
+    transition: 300ms;
+}
+.animate-link:hover:after {
+    width: 100%;
+}
+.animate-link:not(:hover):after {
+    right: 0;
+    left: auto;
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+    }
+}

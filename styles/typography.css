@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Open+Sans:wght@400;600&family=Raleway:wght@800&display=swap');
+.subtitle {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    font-size: 0.93rem;
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+}
+body {
+    font-family: 'open sans', sans-serif;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+h1 { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.3rem;
+}
