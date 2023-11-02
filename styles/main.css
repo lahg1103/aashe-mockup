@@ -146,9 +146,12 @@ a:hover, button:hover {
     box-shadow: var(--softshadow);
 }
 
-/* list */
+/* decor */
 .no-bullet {
     list-style: none;
+}
+.no-decor {
+    text-decoration: none;
 }
 
 /* logo */
