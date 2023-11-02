@@ -37,38 +37,42 @@ p {
 .center-text {
     text-align: center;
 }
-.gap-1x {
-    gap: 8px;
-}
+
 .pad-1x {
-    padding: 16px;
+    padding: 8px;
 }
 .pad-2x {
-    padding: 32px;
+    padding: 16px;
 }
 .margin-1x {
-    margin: 16px;
+    margin: 8px;
 }
 .margin-2x {
-    margin: 32px;
+    margin: 16px;
 }
 .pad-horizontal-1x {
-    padding: 0 16px;
+    padding: 0 8px;
 }
 .pad-horizontal-2x {
-    padding: 0 32px;
+    padding: 0 16px;
+}
+.margin-horizontal-1x {
+    padding: 0 8px;
+}
+.margin-horizontal-2x {
+    padding: 0 16px;
 }
 .pad-vertical-1x {
-    padding: 16px 0;
+    padding: 8px 0;
 }
 .pad-vertical-2x {
-    padding: 32px 0;
+    padding: 16px 0;
 }
 .margin-vertical-1x {
-    margin: 16px 0;
+    margin: 8px 0;
 }
 .margin-vertical-2x {
-    margin: 32px 0;
+    margin: 16px 0;
 }
 
 /* this will center items with flex class */
@@ -153,8 +157,20 @@ a:hover, button:hover {
 .no-decor {
     text-decoration: none;
 }
+.hide {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px; 
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
 
-/* logo */
+/* navigation */
 .logo-container {
     flex: 1;
     width: 35%;
@@ -165,4 +181,12 @@ a:hover, button:hover {
     min-width: 100px;
     max-width: 150px;
     width: 50%;
+}
+.hamburger-menu {
+    background-image: url("/assets/icons/hamburger-menu-icon-cropped.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 1.5rem;
+    height: 1.5rem;
 }
