@@ -8,7 +8,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background: var(--default-white);
+    background: var(--link-blue);
     transition: 300ms;
 }
 .animate-link:hover:after {
@@ -17,6 +17,29 @@
 .animate-link:not(:hover):after {
     right: 0;
     left: auto;
+}
+nav{
+    max-height: 0;
+    transition: max-height 400ms ease-in;
+    overflow: hidden;
+}
+.bar {
+    width: 1.5rem;
+    height: 2px;
+    background-color: var(--default-white);
+    transition: 400ms;
+    margin: 8px 0;
+}
+.menu-expanded .bar:nth-child(1) {
+    transform: rotate(45deg) translateX(7px); 
+    width: 2rem;
+}
+.menu-expanded .bar:nth-child(2) {
+    display: none;
+}
+.menu-expanded .bar:nth-child(3) {
+    transform: rotate(-45deg) translateX(7px);
+    width: 2rem;
 }
 @keyframes slideUp {
     from {
