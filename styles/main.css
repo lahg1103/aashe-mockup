@@ -321,6 +321,21 @@ a:hover, button:hover {
 /* responsive */
 @media (max-width: 628px) {
     .gallery-container {
-        transform: scale(0.9);
+        transform: scale(0.8);
+    }
+}
+@media (max-width: 450px) {
+    .gallery-container {
+        transform: scale(0.7);
+    }
+}
+@media (max-width: 375px) {
+    .gallery-container {
+        transform: scale(0.6);
+    }
+}
+@media (max-width: 365px) {
+    .gallery-container {
+        transform: scale(0.55);
     }
 }
