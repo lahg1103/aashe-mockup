@@ -11,6 +11,11 @@
     --utrgv-orange : #CB4900;
     --info-blue : #00216E;
     --light-grey : #ededed;
+    --reporter: #848E2B;
+    --bronze: #8C7459;
+    --silver: #A7A9AC;
+    --gold: #A39161;
+    --platinum: #8E8C8A;
     --soft-shadow: 0px 2px 20px -10px rgba(0,0,0,0.5);
 }
 
@@ -147,6 +152,21 @@ a:hover, button:hover {
 .white-background {
     background-color: var(--default-white);
 }
+.reporter {
+    background-color: var(--reporter);
+}
+.bronze {
+    background-color: var(--bronze);
+}
+.silver {
+    background-color: var(--silver);
+}
+.gold{ 
+    background-color: var(--gold);
+}
+.platinum {
+    background-color: var(--platinum);
+}
 
 /* frames */
 .hexagon {
@@ -180,6 +200,14 @@ a:hover, button:hover {
     padding: 0;
     border: 0;
 }
+.divisor {
+    height: 6px;
+    background-color: var(--utrgv-orange);
+    width: 100%;
+}
+.pointer {
+    cursor: pointer;
+}
 
 /* navigation */
 #nav-links {
@@ -198,4 +226,101 @@ a:hover, button:hover {
     width: 50%;
 }
 
+/* HONEYCOMB */
+.reporter {
+    background-color: #848E2B;
+}
+.bronze {
+    background-color: #8C7459;
+}
+.silver {
+    background-color: #A7A9AC;
+}
+.gold {
+    background-color: #A39161;
+}
+.platinum {
+    background-color: #8E8C8A;
+}
+.gallery-container {
+    display: grid;
+    place-content: center;
+    height: auto;
+}
+.gallery {
+    --s: 150px;
+    --g: 10px;
+    --shift: -45%;
+    display: grid;
+    margin-top: calc(var(--s) + var(--g));
+    margin-bottom: -50%;
+}
+.gallery > img {
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 1.15;
+    object-fit: contain;
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    transform: translate(calc(var(--_x,0) + var(--shift)),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 200ms linear;
+}
+.gallery > img:hover {
+    filter: grayscale(0);
+    z-index: 1;
+    --_t: 1.2;
+}
+.gallery > img:nth-child(1) {
+    --_y: calc(-100% - var(--g));
+    --_x: calc(-100% - var(--g));
+}
+.gallery > img:nth-child(3) {
+    --_y: calc(-100% - var(--g));
+    --_x: calc(52.5% - var(--g));
+}
+.gallery > img:nth-child(2) {
+    --_y: calc(-50% - var(--g));
+    --_x: calc(-37% + var(--g));
+}
+.gallery > img:nth-child(5) {
+    --_y: calc(-100% - var(--g));
+    --_x: calc(191.5% + var(--g));
+}
+.gallery > img:nth-child(4) {
+    --_y: calc(-50% - var(--g));
+    --_x: calc(128.6% - var(--g));
+}
 
+/* timeline */
+#timeline-carousel {
+    position: relative;
+}
+#timeline-carousel::before, #timeline-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    mix-blend-mode: multiply;
+}
+#timeline-carousel::before {
+    opacity: 60%;
+    background-color: #000;
+}
+#timeline-carousel::after {
+    background-image: url("/assets/utrgv-brownsville.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 75%;
+}
+
+/* responsive */
+@media (max-width: 628px) {
+    .gallery-container {
+        transform: scale(0.9);
+    }
+}

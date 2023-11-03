@@ -26,4 +26,13 @@ window.addEventListener('DOMContentLoaded', () => {
             nav.style.maxHeight = '0';
         }
     });
+
+
+    const dates = Array.from(document.querySelectorAll(".date"));
+    dates.forEach((date) => {
+        let dateID = date.textContent;
+        date.addEventListener('click', () => {
+            console.log(dateID);
+        })
+    });
 });
