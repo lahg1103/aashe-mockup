@@ -178,6 +178,9 @@ a:hover, button:hover {
 .slash {
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
 }
+.frame {
+    border-radius: 12px 0px 12px 0px;
+}
 
 /* shadow */
 .soft-shadow {
@@ -214,8 +217,9 @@ a:hover, button:hover {
 .round {
     border-radius: 12px;
 }
-.frame {
-    border-radius: 12px 0px 12px 0px;
+.date {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* navigation */
@@ -241,6 +245,9 @@ a:hover, button:hover {
 .aashe-stars > li img {
     max-width: 18vw;
 }
+
+/* main */
+
 
 /* HONEYCOMB */
 .reporter {
@@ -284,6 +291,7 @@ a:hover, button:hover {
     filter: grayscale(100%);
     transition: 200ms linear;
     position: relative;
+    background-color: var(--light-grey);
 }
 .gallery > div:hover {
     filter: grayscale(0);
@@ -318,7 +326,6 @@ a:hover, button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
     font-size: 1.1rem;
     font-weight: bold;
     opacity: 0;
@@ -337,8 +344,6 @@ a:hover, button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(transparent, rgba(64, 22, 22, 0.5), transparent);
-    mix-blend-mode: multiply;
     opacity: 0;
     transition: opacity 200ms ease-in;
 }
@@ -347,31 +352,7 @@ a:hover, button:hover {
     opacity: 1;
 }
 
-/* timeline */
-#timeline-carousel {
-    position: relative;
-}
-#timeline-carousel::before, #timeline-carousel::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    mix-blend-mode: multiply;
-}
-#timeline-carousel::before {
-    opacity: 60%;
-    background-color: #000;
-}
-#timeline-carousel::after {
-    background-image: url("/assets/utrgv-brownsville.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 75%;
-}
+
 
 .connect {
     padding: 1.15rem;
