@@ -243,6 +243,7 @@ a:hover, button:hover {
     background-color: #8E8C8A;
 }
 .gallery-container {
+    transition: transform 0.3s ease;
     display: grid;
     place-content: center;
     height: auto;
@@ -318,7 +319,7 @@ a:hover, button:hover {
     opacity: 75%;
 }
 
-/* responsive */
+/* responsive smaller*/
 @media (max-width: 628px) {
     .gallery-container {
         transform: scale(0.8);
@@ -337,5 +338,16 @@ a:hover, button:hover {
 @media (max-width: 365px) {
     .gallery-container {
         transform: scale(0.55);
+    }
+}
+/* responsive bigger */
+@media (min-width: 810px) {
+    .gallery-container {
+        transform: scale(1.25);
+    }
+}
+@media (min-width: 1090px) {
+    .gallery-container {
+        transform: scale(1.45);
     }
 }
