@@ -211,6 +211,12 @@ a:hover, button:hover {
 .pointer {
     cursor: pointer;
 }
+.round {
+    border-radius: 12px;
+}
+.frame {
+    border-radius: 12px 0px 12px 0px;
+}
 
 /* navigation */
 #nav-links {
@@ -367,6 +373,13 @@ a:hover, button:hover {
     opacity: 75%;
 }
 
+.connect {
+    padding: 1.15rem;
+    transition: 400ms ease-in-out;
+}
+.connect:hover {
+    box-shadow: 0px 0px 4px 3px rgba(111, 120, 140, 0.5);
+}
 /* responsive smaller*/
 @media (max-width: 628px) {
     .gallery-container {
@@ -374,6 +387,9 @@ a:hover, button:hover {
     }
     .aashe-stars > li img {
         max-width: 25vw;
+    }
+    .aashe-stars:hover {
+        cursor: ew-resize;
     }
 }
 @media (max-width: 450px) {

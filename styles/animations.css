@@ -18,6 +18,11 @@
     right: 0;
     left: auto;
 }
+
+.animate-link.white-text:after {
+    background: #fff;
+}
+
 nav{
     max-height: 0;
     transition: max-height 400ms ease-in;

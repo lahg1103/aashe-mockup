@@ -29,10 +29,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const dates = Array.from(document.querySelectorAll(".date"));
+    const slides = Array.from(document.querySelectorAll(".slide"));
+    // default slide
+    slides[dates.length -1].classList.remove('hide');
     dates.forEach((date) => {
         let dateID = date.textContent;
         date.addEventListener('click', () => {
-            console.log(dateID);
-        })
+            slides.forEach((slide) => {
+                slide.classList.add('hide');
+            });
+            document.getElementById(dateID).classList.remove('hide');
+        });
+        
     });
+    
 });
