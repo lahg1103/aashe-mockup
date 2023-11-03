@@ -87,6 +87,9 @@ p {
 .margin-vertical-2x {
     margin: 16px 0;
 }
+.scroll-horizontal {
+    overflow-x: scroll;
+}
 
 /* this will center items with flex class */
 .self-center-vertical {
@@ -226,6 +229,13 @@ a:hover, button:hover {
     width: 50%;
 }
 
+.aashe-stars {
+    max-width: 100%;
+}
+.aashe-stars > li img {
+    max-width: 18vw;
+}
+
 /* HONEYCOMB */
 .reporter {
     background-color: #848E2B;
@@ -362,10 +372,16 @@ a:hover, button:hover {
     .gallery-container {
         transform: scale(0.8);
     }
+    .aashe-stars > li img {
+        max-width: 25vw;
+    }
 }
 @media (max-width: 450px) {
     .gallery-container {
         transform: scale(0.7);
+    }
+    .aashe-stars > li img {
+        max-width: 24vw;
     }
 }
 @media (max-width: 375px) {
