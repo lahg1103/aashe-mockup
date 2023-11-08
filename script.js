@@ -26,13 +26,4 @@ window.addEventListener('DOMContentLoaded', () => {
             nav.style.maxHeight = '0';
         }
     });
-
-    const circles = Array.from(document.querySelectorAll(".circle"));
-    circles.forEach(circle => {
-        const percent = circle.getAttribute("data-percent");
-        circle.innerText = `${percent}%`;
-        circle.style.backgroundImage = `linear-gradient(white, white), 
-        conic-gradient(var(--light-blue) ${percent}%, transparent 0 100% )`;
-    });
-    
 });
