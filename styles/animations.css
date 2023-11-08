@@ -46,6 +46,14 @@ nav{
     transform: rotate(-45deg) translateX(7px);
     width: 2rem;
 }
+
+.aashe-star {
+    transition: 400ms  ease-in-out ;
+}
+.aashe-star:hover {
+    transform: scale(1.12);
+}
+
 @keyframes slideUp {
     from {
         transform: translateY(100%);
