@@ -304,6 +304,9 @@ a:hover, button:hover {
     --g: 10px;
     --shift: -45%;
     display: flex;
+    gap: 8px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .gallery > div {
     grid-area: 1/1;
