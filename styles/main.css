@@ -39,6 +39,12 @@ p {
     /* displays items in rows */
     display: flex;
 }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    justify-items: center;
+}
 .block {
     /* displays items vertically */
     display: block;
@@ -92,6 +98,12 @@ p {
 }
 
 /* this will center items with flex class */
+.last {
+    grid-column: 1 / span 2;
+}
+.reverse {
+    flex-direction: row-reverse;
+}
 .self-center-vertical {
     align-self: center;
 }
@@ -181,7 +193,23 @@ a:hover, button:hover {
 .frame {
     border-radius: 12px 0px 12px 0px;
 }
-
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: double 0.7rem transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(white, white), 
+                    conic-gradient(var(--light-blue) 88%, transparent 0 100% );
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    text-align: center;
+}
+.no-shrink {
+    flex: 0 0 auto;
+}
 /* shadow */
 .soft-shadow {
     box-shadow: var(--soft-shadow);
@@ -275,9 +303,10 @@ a:hover, button:hover {
     --s: 150px;
     --g: 10px;
     --shift: -45%;
-    display: grid;
-    margin-top: calc(var(--s) + var(--g) + 15%);
-    margin-bottom: -50%;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 .gallery > div {
     grid-area: 1/1;
@@ -300,26 +329,6 @@ a:hover, button:hover {
 }
 .gallery > div:hover span {
     opacity: 1;
-}
-.gallery > div:nth-child(1) {
-    --_y: calc(-100% - var(--g));
-    --_x: calc(-100% - var(--g));
-}
-.gallery > div:nth-child(3) {
-    --_y: calc(-100% - var(--g));
-    --_x: calc(52.5% - var(--g));
-}
-.gallery > div:nth-child(2) {
-    --_y: calc(-50% - var(--g));
-    --_x: calc(-37% + var(--g));
-}
-.gallery > div:nth-child(5) {
-    --_y: calc(-100% - var(--g));
-    --_x: calc(191.5% + var(--g));
-}
-.gallery > div:nth-child(4) {
-    --_y: calc(-50% - var(--g));
-    --_x: calc(128.6% - var(--g));
 }
 .gallery > div span {
     position: absolute;
@@ -353,7 +362,6 @@ a:hover, button:hover {
 }
 
 
-
 .connect {
     padding: 1.15rem;
     transition: 400ms ease-in-out;
@@ -361,6 +369,11 @@ a:hover, button:hover {
 .connect:hover {
     box-shadow: 0px 0px 4px 3px rgba(111, 120, 140, 0.5);
 }
+
+#highlights {
+    gap: 16px;
+}
+
 /* responsive smaller*/
 @media (max-width: 628px) {
     .gallery-container {
