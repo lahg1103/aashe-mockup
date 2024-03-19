@@ -39,6 +39,9 @@ p {
     /* displays items in rows */
     display: flex;
 }
+.flex-c {
+    flex-direction: column;
+}
 .block {
     /* displays items vertically */
     display: block;
@@ -106,6 +109,9 @@ p {
 }
 .space-between {
     justify-content: space-between;
+}
+.space-evenly {
+    justify-content: space-evenly;
 }
 .space-around {
     justify-content: space-around;
@@ -220,6 +226,19 @@ a:hover, button:hover {
 .date {
     font-size: 1.5rem;
     font-weight: bold;
+}
+.button-link {
+    all:unset;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    border: 0.15rem var(--default-white) solid;
+    padding-inline: 0.5rem;
+    padding-block: 0.1rem;
+    margin-inline: 0.55rem;
+}
+.button-link:hover {
+    background-color: var(--default-white);
+    color: var(--dark-grey);
 }
 
 /* navigation */
