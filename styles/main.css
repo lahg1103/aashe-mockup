@@ -8,6 +8,7 @@
     --default-black : #212529;
     --link-blue : #0F549B;
     --light-blue : #629fdc;
+    --accent-orange: #ff4d00;
     --utrgv-orange : #CB4900;
     --info-blue : #00216E;
     --light-grey : #ededed;
@@ -21,9 +22,13 @@
 
 
 /* general page, to override default browser styles */
+body, html {
+    padding: 0;
+    margin: 0;
+}
 body {
     overflow-x: hidden;
-    color: var(--text-black);
+    color: var(--dark-grey);
     background-color: var(--default-white);
     box-sizing: border-box;
 }
@@ -43,7 +48,7 @@ main {
     align-content: center;
     justify-content: center;
 }
-article {
+section {
     padding-block: 1.55rem;
 }
 
@@ -51,12 +56,19 @@ article {
 .full-w {
     width: 100%;
 }
+.width34 {
+    width: 75%;
+    margin: auto;
+}
 .flex {
     display: flex;
 }
 .flex-c {
     display: flex;
     flex-direction: column;
+}
+.center {
+    text-align: center;
 }
 .center-vertical {
     /* when using this on flex-c this will align horizontally */
@@ -71,21 +83,66 @@ article {
 .space-evenly {
     justify-content: space-evenly;
 }
+
+
 /* colors */
 .accent-section {
     background-color: var(--utrgv-orange);
     color: var(--default-white);
 }
+.blue-link {
+    text-decoration: underline;
+    color: var(--link-blue) !important;
+}
 
 /* decor */
 .button-link {
+    font-weight: bold;
     text-transform: uppercase;
     border: 0.17rem solid var(--default-white);
     border-radius: 0.3rem;
-    padding-inline: 0.3rem;
+    padding: 0.34rem 0.6rem;
+}
+.button-link:hover {
+    background-color: var(--default-white);
+    color: var(--dark-grey);
 }
 .banner {
     width: 100%;
     max-width: 1125px;
     margin-inline: auto;
 }
+.disc {
+    list-style: disc;
+}
+.underline {
+    position: relative;
+}
+.underline::after {
+    content: '';
+    position: absolute;
+    height: 0.5rem;
+    width: 75%;
+    background-color: var(--accent-orange);
+    left: 0;
+    bottom: -0.5rem;
+}
+.divisor {
+    height: 3px;
+    background-color: var(--light-grey);
+}
+.highlight {
+    font-weight: 700;
+    color: var(--default-white);
+    background-color: var(--utrgv-orange);
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+}
+.upper {
+    text-transform: uppercase;
+}
+.strong {
+    font-weight: bold;
+}
+
+/* queries */
