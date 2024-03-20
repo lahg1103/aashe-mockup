@@ -23,11 +23,7 @@
     background: #fff;
 }
 
-nav{
-    max-height: 0;
-    transition: max-height 400ms ease-in;
-    overflow: hidden;
-}
+
 .bar {
     width: 1.5rem;
     height: 2px;

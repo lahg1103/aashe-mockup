@@ -7,13 +7,45 @@
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     </head>
     <body>
-        <main>
-            <img src="assets/aashe-banner.jpeg" class="banner">
+        <header>
+                <div class="logo-container">
+                    <img src="assets/utrgv-logo.png" alt="UTRGV logo" width="150">
+                </div>
+                <div class="hamburger-container" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+        </header>
+        <nav>
+            <ul id="dropdown-menu" class="hidden">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Academics and Research</a></li>
+                <li><a href="">UN SDGs</a></li>
+                <li><a href="">Programs</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Guides and Resources</a></li>
+                <li><a href="">Sustainability Fellowships</a></li>
+                <li><a href="">News</a></li>
+            </ul>
+        </nav>
+        <main aria-label="main-content">
+            <!-- <img src="assets/top-banner.jpg" class="banner"> -->
             <section id="viewReport" class="accent-section flex-c center-vertical">
                 <h1>2023 AASHEE Report</h1>
                 <div class="flex self-center-vertical space-evenly full-w">
                     <a href="https://reports.aashe.org/institutions/university-of-texas-rio-grande-valley-tx/report/" class="button-link">View Past Reports</a><a href="https://reports.aashe.org/institutions/university-of-texas-rio-grande-valley-tx/report/2023-01-10/" class="button-link">2023 Report</a>
                 </div>
+            </section>
+            <img src="assets/gold-banner.png" alt="UTRGV Strikes GOLD for Excellence in Sustainability" class="banner">
+            <section id="news">
+                <div class="width34">
+                    <p>The University of Texas Rio Grande Valley is the first in the UT System and one of only three universities in Texas to earn AASHE STARS “Gold” status for its sustainability initiatives. 
+                        <a href="https://www.utrgv.edu/newsroom/2023/06/23/utrgv-earns-second-gold-rating-for-campus-sustainability-practices.htm" class="blue-link">Read More here</a>.
+                    </p>
+                </div>
+                
             </section>
             <section id="STARSinfo">
                 <div class="width34">
@@ -28,7 +60,11 @@
                     <li>Strengthen the campus sustainability community</li>
                 </ul>
                 <p><strong>For more information visit <a href="" class="blue-link">AASHE's website</a>.</strong></p>
+                <div class="stars-container">
+                    <img src="assets/AASHE-REPORTER.png" alt="AASHE Reporter emblem"><img src="assets/AASHE-BRONZE.png" alt="AASHE Bronze emblem"><img src="assets/AASHE-SILVER.png" alt="AASHE Silver emblem"><img src="assets/AASHE-GOLD.png" alt="AASHE Gold emblem"><img src="assets/AASHE-PLATINUM.png" alt="AASHE Platinum emblem">
                 </div>
+                </div>
+                
             </section>
             <div class="divisor width34"></div>
             <section id="timeline">
@@ -63,20 +99,25 @@
                         <div data-year="2015" class="hidden timeline-slide">
                             <h3>STARS Version 2.0</h3>
                             <img src="assets/AASHE-SILVER.png" alt="AASHE Silver rating emblem" width="225">
-                            <a href="" class="blue-link">View 2015 report</a>
+                            
+                            <p> Needs blurb <a href="" class="blue-link">View 2015 report</a></p>
                         </div>
                         <div data-year="2018" class="hidden timeline-slide">
                             <h3>STARS Version 2.1</h3>
                             <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="225">
-                            <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita" class="blue-link">View 2018 report</a>
+                            <p> Needs blurb <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita" class="blue-link">View 2018 report</a> </p>
                         </div>
                         <div data-year="2023" class="timeline-slide">
                             <h3>STARS Version 2.2</h3>
                             <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="225">
-                            <a href="" class="blue-link">View 2023 report</a>
+                            <p class="center">Our newest <a href="" class="blue-link">2023 report</a> puts us at a <span class="emphasis">repeat Gold STARS rating twice in a row.</span></p>
                         </div>
                     </div>
                     
+                </div>
+                <div class="width34">
+                    <p>Needs blurb about university efforts to improve sustainability.</p>
+                    <p>Each report includes scores in: Academics, Engagement, Operations, Planning and Administration, and Innovation and Leadership.</p>
                 </div>
             </section>
             <div class="divisor width34"></div>
@@ -105,6 +146,12 @@
                     <p class="center upper strong"> In Innovation and Leadership </p>
                     <p class="center"> needs blurb </p>
                 </div>
+            </section>
+            <div class="divisor"></div>
+            <section id="contact" class="width34">
+                <h1 class="underline"> Questions or Comments? </h1>
+                <p>We invite you to Contact OFS for any questions and to Connect with us through Social Media.</p>
+                <a href="https://www.utrgv.edu/sustainability/about/connect-with-ofs/index.htm" class="button-link">Connect with OFS</a>
             </section>
         </main>
         <!-- <script src="script.js"></script> -->
@@ -182,6 +229,13 @@
                         matchSlidetoRadio(id);
                     });
                 });
+
+                const hamburger = document.getElementById("hamburger");
+                const dropdown = document.getElementById("dropdown-menu");
+                hamburger.addEventListener(('click'), ()=> {
+                    dropdown.classList.toggle('hidden');
+                    hamburger.classList.toggle('menu-expanded');
+                })
                 
                 window.addEventListener('resize', ()=>{
                     w = getSpaceBetweenRadio(radio);

@@ -99,7 +99,45 @@ fieldset {
     color: var(--link-blue) !important;
 }
 
+/* header */
+
+header {
+    background-color: var(--dark-grey);
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px rgba(231, 231, 231, 0.1) solid;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+.logo-container {
+    background-color: var(--default-white);
+}
+.hamburger-container {
+    margin-right: 0.5rem;
+    align-self: center;
+}
+.hamburger-container:hover {
+    cursor: pointer;
+}
+#dropdown-menu li a {
+    text-decoration: underline;
+}
+#dropdown-menu li a:hover {
+    font-weight: bold;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* decor */
+.stars-container {
+    display: flex;
+    justify-content: space-around;
+}
+.stars-container img {
+    width: 15%;
+}
 .button-link {
     font-weight: bold;
     text-transform: uppercase;
@@ -110,6 +148,19 @@ fieldset {
 .button-link:hover {
     background-color: var(--default-white);
     color: var(--dark-grey);
+}
+#contact .button-link {
+    background-color: var(--utrgv-orange);
+    color: var(--default-white);
+    text-decoration: underline;
+    border: 1px solid #999;
+    box-shadow: 1px 2px 6px #999;
+    padding: 0.5rem 0.9rem;
+    align-self: center;
+    justify-self: center;
+}
+#contact .button-link:hover {
+    background-color: var(--accent-orange);
 }
 .banner {
     width: 100%;
@@ -130,6 +181,10 @@ fieldset {
     background-color: var(--accent-orange);
     left: 0;
     bottom: -0.5rem;
+}
+.emphasis {
+    text-decoration: underline;
+    font-weight: bold;
 }
 .divisor {
     height: 3px;
@@ -251,5 +306,11 @@ input:hover, label:hover {
 #highlights div h3:first-of-type {
     margin-top: 2.5rem;
     margin-bottom: 3rem;
+}
+
+/* contact */
+#contact {
+    display: flex;
+    flex-direction: column;
 }
 /* queries */
