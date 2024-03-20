@@ -147,6 +147,18 @@ fieldset {
 .strong {
     font-weight: bold;
 }
+.hidden {
+    position: absolute;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
+}
 
 /* timeline */
 fieldset {
@@ -206,9 +218,6 @@ input:hover, label:hover {
     left: 0;
     box-shadow: 2px 0px 3px rgba(0,0,0,0.1);
 }
-.transition {
-    transition: 0.15s linear all;
-}
 #circle-progress {
     width: 0.75rem;
     height: 0.75rem;
@@ -225,7 +234,15 @@ input:hover, label:hover {
 }
 #timeline-info {
     background-color: var(--light-grey);
-    height: 15rem;
+    height: auto;
+    overflow: hidden;
+}
+#timeline-info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 /* queries */

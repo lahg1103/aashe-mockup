@@ -38,15 +38,15 @@
                         <fieldset>
                             <legend>A proven track record of excellence</legend>
                             <div>
-                                <input type="radio" id="2015" value="2015" name="year" data-toggle-value="2015">
+                                <input type="radio" id="2015" value="2015" name="year" >
                                 <label for="2015"> 2015</label>
                             </div>
                             <div>
-                                <input type="radio" id="2018" value="2018" name="year" data-toggle-value="2018">
+                                <input type="radio" id="2018" value="2018" name="year" >
                                 <label for="2018"> 2018</label>
                             </div>
                             <div>
-                                <input type="radio" id="2023" value="2023" name="year" data-toggle-value="2023" checked>
+                                <input type="radio" id="2023" value="2023" name="year"  checked>
                                 <label for="2023"> 2023</label>
                             </div>
                         </fieldset>
@@ -60,9 +60,20 @@
                 <div id="timeline-container">
                     
                     <div id="timeline-info">
-                        <div data-toggle-group="2015"></div>
-                        <div data-toggle-group="2018">
-                            <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita">View 2018 report</a>
+                        <div data-year="2015" class="hidden timeline-slide">
+                            <h3>STARS Version 2.0</h3>
+                            <img src="assets/AASHE-SILVER.png" alt="AASHE Silver rating emblem" width="150">
+                            <a href="" class="blue-link">View 2015 report</a>
+                        </div>
+                        <div data-year="2018" class="hidden timeline-slide">
+                            <h3>STARS Version 2.1</h3>
+                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="150">
+                            <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita" class="blue-link">View 2018 report</a>
+                        </div>
+                        <div data-year="2023" class="timeline-slide">
+                            <h3>STARS Version 2.2</h3>
+                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="150">
+                            <a href="" class="blue-link">View 2023 report</a>
                         </div>
                     </div>
                     
@@ -115,8 +126,19 @@
                 let radio1 = r[0].getBoundingClientRect(), radio2 = r[1].getBoundingClientRect();
                 return Math.ceil(radio2.left - radio1.right);
             }
+            function matchSlidetoRadio(rID) {
+                let slides = Array.from(document.querySelectorAll('.timeline-slide'));
+                slides.forEach((slide) => {
+                    if (rID == slide.getAttribute('data-year')) {
+                        slide.classList.remove('hidden');
+                    }
+                    else {
+                        slide.classList.add('hidden');
+                    }
+                });
+            }
             window.addEventListener("DOMContentLoaded", () => {
-                const radio = Array.from(document.querySelectorAll('input'));
+                const radio = Array.from(document.querySelectorAll('input[type=radio]'));
                 let radioSize = radio[0].getBoundingClientRect().right - radio[0].getBoundingClientRect().left;
                 let w = getSpaceBetweenRadio(radio);
                 changeWidth(w, radioSize, 2);
@@ -124,14 +146,12 @@
 
                 radio.forEach((r, index) => {
                     
-                    r.addEventListener('click', () =>{
+                    r.addEventListener('change', () =>{
                         let id = r.getAttribute('id');
                         changeWidth(w, radioSize, index + 1, 'notResize');
-                        r.classList.add('transition');
                         currentIteration = index;
-                    })
-
-                    r.classList.remove('transition');
+                        matchSlidetoRadio(id);
+                    });
                 });
                 
                 window.addEventListener('resize', ()=>{
@@ -139,6 +159,7 @@
                     changeWidth(w, radioSize, currentIteration);
                 });
                 
+
 });
         </script>
     </body>
