@@ -246,4 +246,10 @@ input:hover, label:hover {
     margin-bottom: 1.5rem;
 }
 
+
+/* highlights */
+#highlights div h3:first-of-type {
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
 /* queries */
