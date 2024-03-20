@@ -34,7 +34,38 @@
             <section id="timeline">
                 <div class="width34">
                     <h1 class="underline">Sustainability Progress</h1>
-                    <h3>A proven track record of excellence.</h3>
+                    <div class="overlap">
+                        <fieldset>
+                            <legend>A proven track record of excellence</legend>
+                            <div>
+                                <input type="radio" id="2015" value="2015" name="year" data-toggle-value="2015">
+                                <label for="2015"> 2015</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="2018" value="2018" name="year" data-toggle-value="2018">
+                                <label for="2018"> 2018</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="2023" value="2023" name="year" data-toggle-value="2023" checked>
+                                <label for="2023"> 2023</label>
+                            </div>
+                        </fieldset>
+                        <div id="progress-bar">
+                            <div id="circle-progress"></div>
+                            <div id="progress"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="timeline-container">
+                    
+                    <div id="timeline-info">
+                        <div data-toggle-group="2015"></div>
+                        <div data-toggle-group="2018">
+                            <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita">View 2018 report</a>
+                        </div>
+                    </div>
+                    
                 </div>
             </section>
             <div class="divisor width34"></div>
@@ -65,6 +96,50 @@
                 </div>
             </section>
         </main>
-        <script src="script.js"></script>
+        <!-- <script src="script.js"></script> -->
+        <script>
+            function changeWidth(newWidth, radioSize, i, calledBy) {
+                if (arguments.length == 3) {
+                    calledBy = 'resize';
+                }
+                let p = document.getElementById('progress'), c = document.getElementById('circle-progress');
+                if (calledBy === 'resize') {
+                    calculatedWidth = newWidth * (i + 1) + radioSize * i;
+                } else {
+                    calculatedWidth = newWidth * (i - 1) + radioSize * (i - 1) + newWidth;
+                }
+                p.style.width = calculatedWidth + 'px';
+                c.style.left = (calculatedWidth - Math.floor(c.clientWidth)) + 'px';
+            }
+            function getSpaceBetweenRadio(r) {
+                let radio1 = r[0].getBoundingClientRect(), radio2 = r[1].getBoundingClientRect();
+                return Math.ceil(radio2.left - radio1.right);
+            }
+            window.addEventListener("DOMContentLoaded", () => {
+                const radio = Array.from(document.querySelectorAll('input'));
+                let radioSize = radio[0].getBoundingClientRect().right - radio[0].getBoundingClientRect().left;
+                let w = getSpaceBetweenRadio(radio);
+                changeWidth(w, radioSize, 2);
+                let currentIteration;
+
+                radio.forEach((r, index) => {
+                    
+                    r.addEventListener('click', () =>{
+                        let id = r.getAttribute('id');
+                        changeWidth(w, radioSize, index + 1, 'notResize');
+                        r.classList.add('transition');
+                        currentIteration = index;
+                    })
+
+                    r.classList.remove('transition');
+                });
+                
+                window.addEventListener('resize', ()=>{
+                    w = getSpaceBetweenRadio(radio);
+                    changeWidth(w, radioSize, currentIteration);
+                });
+                
+});
+        </script>
     </body>
 </html>

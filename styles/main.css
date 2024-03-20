@@ -51,6 +51,9 @@ main {
 section {
     padding-block: 1.55rem;
 }
+fieldset {
+    all: unset;
+}
 
 /* spacing */
 .full-w {
@@ -143,6 +146,86 @@ section {
 }
 .strong {
     font-weight: bold;
+}
+
+/* timeline */
+fieldset {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: transparent;
+}
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+fieldset legend {
+    text-align: center;
+    margin-block: 1rem;
+}
+input {
+    appearance: none;
+
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+input:checked {
+    border: 6px solid var(--utrgv-orange);
+  }
+input:hover, label:hover {
+    cursor: pointer;
+}
+#progress-bar {
+    background-color: #eee;
+    height: 6px;
+    width: 100%;
+    border-radius: 6px;
+    border: 0.5px #999 solid;
+    box-shadow: 5px 2px 7px rgba(0,0,0,0.2);
+    z-index: -1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 7%);
+}
+#progress {
+    border-radius: 6px;
+    height: 6px;
+    width: 15%;
+    background-color: var(--accent-orange);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: 2px 0px 3px rgba(0,0,0,0.1);
+}
+.transition {
+    transition: 0.15s linear all;
+}
+#circle-progress {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #ff4d00;
+    border: 1px solid var(--accent-orange);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    z-index: 999;
+}
+#timeline-container {
+    margin-block-start: 3rem;
+}
+#timeline-info {
+    background-color: var(--light-grey);
+    height: 15rem;
 }
 
 /* queries */
