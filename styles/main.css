@@ -117,6 +117,9 @@ header {
     padding-top: 0.5rem;
     padding-inline: 0.5rem 2rem;
 }
+.menu-container {
+    margin-right: 0.5rem;
+}
 .hamburger-container {
     margin-right: 0.5rem;
     align-self: center;
@@ -130,6 +133,7 @@ header {
 }
 #dropdown-menu li {
     width: 100%;
+    padding-block: 1.15rem;
 }
 #dropdown-menu li:hover {
     background-color: #777;
@@ -344,5 +348,43 @@ input:hover, label:hover {
 #contact {
     display: flex;
     flex-direction: column;
+}
+
+/* footer */
+#footercontact {
+    background-color: var(--light-grey);
+}
+footer .divisor {
+    background-color: rgba(0,0,0,0.1);
+}
+.hours {
+    display: flex;
+    justify-content: space-evenly;
+}
+.edinburg ul {
+    padding: 0;
+    margin: 0;
+}
+.contact-options p {
+    text-transform: uppercase;
+}
+.follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.media-icons { 
+    display: inline-flex;
+    gap: 1rem;
+}
+.media-icons svg {
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    width: 35px;
+}
+.media-icons svg:hover {
+    cursor: pointer;
 }
 /* queries */
