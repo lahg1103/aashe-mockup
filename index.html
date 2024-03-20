@@ -36,7 +36,7 @@
                     <h1 class="underline">Sustainability Progress</h1>
                     <div class="overlap">
                         <fieldset>
-                            <legend>A proven track record of excellence</legend>
+                            <legend><h3>A proven track record of excellence</h3></legend>
                             <div>
                                 <input type="radio" id="2015" value="2015" name="year" >
                                 <label for="2015"> 2015</label>
@@ -62,17 +62,17 @@
                     <div id="timeline-info">
                         <div data-year="2015" class="hidden timeline-slide">
                             <h3>STARS Version 2.0</h3>
-                            <img src="assets/AASHE-SILVER.png" alt="AASHE Silver rating emblem" width="150">
+                            <img src="assets/AASHE-SILVER.png" alt="AASHE Silver rating emblem" width="225">
                             <a href="" class="blue-link">View 2015 report</a>
                         </div>
                         <div data-year="2018" class="hidden timeline-slide">
                             <h3>STARS Version 2.1</h3>
-                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="150">
+                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="225">
                             <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita" class="blue-link">View 2018 report</a>
                         </div>
                         <div data-year="2023" class="timeline-slide">
                             <h3>STARS Version 2.2</h3>
-                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="150">
+                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="225">
                             <a href="" class="blue-link">View 2023 report</a>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
             <section id="highlights">
                 <div class="width34">
                     <h1 class="underline">Our STARS 2.2 Report</h1>
-                    <p class="center">Highlights from our 2023 AASHE report.</p>
+                    <h3 class="center">Highlights from our 2023 AASHE report.</h3>
 
                     <h3 class="center"> <span class="highlight">88%</span></h3>
                     <p class="center upper strong"> In academics </p>
@@ -91,19 +91,19 @@
 
                     <h3 class="center"> <span class="highlight">97%</span> </h3>
                     <p class="center upper strong"> In Engagement </p>
-                    <p class="center"></p>
+                    <p class="center">needs blurb </p>
 
                     <h3 class="center"> <span class="highlight">63%</span> </h3>
                     <p class="center upper strong"> In Operations </p>
-                    <p class="center"></p>
+                    <p class="center"> needs blurb</p>
 
                     <h3 class="center"> <span class="highlight">65%</span> </h3>
                     <p class="center upper strong"> In Planning and Administration </p>
-                    <p class="center"></p>
+                    <p class="center"> needs blurb</p>
 
                     <h3 class="center"> <span class="highlight">100%</span> </h3>
                     <p class="center upper strong"> In Innovation and Leadership </p>
-                    <p class="center"></p>
+                    <p class="center"> needs blurb </p>
                 </div>
             </section>
         </main>
@@ -137,6 +137,33 @@
                     }
                 });
             }
+            function getTextWidth(str) { 
+                text = document.createElement("h1"); 
+                document.body.appendChild(text); 
+            
+                text.style.height = 'auto'; 
+                text.style.width = 'auto'; 
+                text.style.position = 'absolute'; 
+                text.style.whiteSpace = 'no-wrap'; 
+                text.innerHTML = str; 
+            
+                width = Math.ceil(text.clientWidth); 
+                formattedWidth = width + "px"; 
+            
+                document.body.removeChild(text);
+                return formattedWidth;
+    }
+
+            function changeUnderline () {
+                let underlinedText = document.querySelectorAll('.underline');
+                underlinedText.forEach(underline => {
+                    let textWidth = getTextWidth(underline.textContent);
+                    console.log(underline.textContent + ' = ' + textWidth);
+                    let underlineStyle = window.getComputedStyle(underline);
+                    let underlineAfter = underlineStyle.getPropertyValue('width', 'after');
+                    underline.style.setProperty('--underline-width', textWidth)
+                })
+            }
             window.addEventListener("DOMContentLoaded", () => {
                 const radio = Array.from(document.querySelectorAll('input[type=radio]'));
                 let radioSize = radio[0].getBoundingClientRect().right - radio[0].getBoundingClientRect().left;
@@ -144,6 +171,8 @@
                 changeWidth(w, radioSize, 2);
                 let currentIteration;
 
+                changeUnderline();
+                
                 radio.forEach((r, index) => {
                     
                     r.addEventListener('change', () =>{
@@ -158,8 +187,6 @@
                     w = getSpaceBetweenRadio(radio);
                     changeWidth(w, radioSize, currentIteration);
                 });
-                
-
 });
         </script>
     </body>

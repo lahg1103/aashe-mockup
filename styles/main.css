@@ -18,6 +18,7 @@
     --gold: #A39161;
     --platinum: #8E8C8A;
     --soft-shadow: 0px 2px 20px -10px rgba(0,0,0,0.5);
+    --underline-width: 75%;
 }
 
 
@@ -125,7 +126,7 @@ fieldset {
     content: '';
     position: absolute;
     height: 0.5rem;
-    width: 75%;
+    width: var(--underline-width);
     background-color: var(--accent-orange);
     left: 0;
     bottom: -0.5rem;
