@@ -348,6 +348,7 @@ input:hover, label:hover {
 #contact {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
 }
 
 /* footer */
