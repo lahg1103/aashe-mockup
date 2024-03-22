@@ -50,6 +50,7 @@
                 </div>
                 
             </section>
+            <div class="scroll-by-background brownsville"></div>
             <section id="STARSinfo">
                 <div class="width34">
                     <h1 class="underline">What is STARS?</h1>
@@ -118,6 +119,7 @@
                     </div>
                     
                 </div>
+                <div class="scroll-by-background bicycle"></div>
                 <div class="width34">
                     <p>Needs blurb about university efforts to improve sustainability.</p>
                     <p>Each report includes scores in: Academics, Engagement, Operations, Planning and Administration, and Innovation and Leadership.</p>
@@ -256,6 +258,12 @@
                     underline.style.setProperty('--underline-width', textWidth)
                 })
             }
+            function preventTransition (id) {
+                document.getElementById(id).style.transition = "none";
+                    setTimeout(function(){
+                document.getElementById(id).style.transition = "270ms all linear";
+                }, 700);
+            }
             window.addEventListener("DOMContentLoaded", () => {
                 const radio = Array.from(document.querySelectorAll('input[type=radio]'));
                 let radioSize = radio[0].getBoundingClientRect().right - radio[0].getBoundingClientRect().left;
@@ -285,6 +293,9 @@
                 window.addEventListener('resize', ()=>{
                     w = getSpaceBetweenRadio(radio);
                     changeWidth(w, radioSize, currentIteration);
+                    preventTransition("progress");
+                    preventTransition("circle-progress");
+
                 });
 });
         </script>

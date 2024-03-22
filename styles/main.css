@@ -1,23 +1,5 @@
-@import url("typography.css");
-@import url("animations.css");
-
 /* colors for the page */
 :root {
-    --default-white: #FFFFFF;
-    --dark-grey : #4C4A4F;
-    --default-black : #212529;
-    --link-blue : #0F549B;
-    --light-blue : #629fdc;
-    --accent-orange: #ff4d00;
-    --utrgv-orange : #CB4900;
-    --info-blue : #00216E;
-    --light-grey : #ededed;
-    --reporter: #848E2B;
-    --bronze: #8C7459;
-    --silver: #A7A9AC;
-    --gold: #A39161;
-    --platinum: #8E8C8A;
-    --soft-shadow: 0px 2px 20px -10px rgba(0,0,0,0.5);
     --underline-width: 75%;
 }
 
@@ -29,9 +11,18 @@ body, html {
 }
 body {
     overflow-x: hidden;
-    color: var(--dark-grey);
-    background-color: var(--default-white);
+    color: #4C4A4F;
+    background-color: #FFFFFF;
     box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-style: normal;
+}
+h1 { 
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.3rem;
 }
 button {
     all:unset;
@@ -91,29 +82,32 @@ fieldset {
 
 /* colors */
 .accent-section {
-    background-color: var(--utrgv-orange);
-    color: var(--default-white);
+    background-color: #CB4900;
+    color: #FFFFFF;
 }
 .blue-link {
     text-decoration: underline;
-    color: var(--link-blue) !important;
+    color: #0F549B !important;
+}
+.blue-link:hover {
+    font-weight: 900;
 }
 
 /* header */
 
 header {
-    background-color: var(--dark-grey);
+    background-color: #4C4A4F;
     display: flex;
     justify-content: space-between;
     border-bottom: 0.5px rgba(231, 231, 231, 0.1) solid;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
-    color: var(--default-white);
+    color: #FFFFFF;
 }
 .menu-container {
     display: flex;
 }
 .logo-container {
-    background-color: var(--default-white);
+    background-color: #FFFFFF;
     padding-top: 0.5rem;
     padding-inline: 0.5rem 2rem;
 }
@@ -129,7 +123,7 @@ header {
 }
 #dropdown-menu li a {
     text-transform: uppercase;
-    color: var(--default-white);
+    color: #FFFFFF;
 }
 #dropdown-menu li {
     width: 100%;
@@ -142,7 +136,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--dark-grey);
+    background-color: #4C4A4F;
 }
 .slash {
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
@@ -150,7 +144,7 @@ nav {
 .bar {
     width: 1.5rem;
     height: 2px;
-    background-color: var(--default-white);
+    background-color: #FFFFFF;
     transition: 400ms;
     margin: 8px 0;
 }
@@ -173,21 +167,25 @@ nav {
 }
 .stars-container img {
     width: 15%;
+    transition: transform 200ms ease-in-out;
+}
+.stars-container img:hover {
+    transform: scale(1.20);
 }
 .button-link {
     font-weight: bold;
     text-transform: uppercase;
-    border: 0.17rem solid var(--default-white);
+    border: 0.17rem solid #FFFFFF;
     border-radius: 0.3rem;
     padding: 0.34rem 0.6rem;
 }
 .button-link:hover {
-    background-color: var(--default-white);
-    color: var(--dark-grey);
+    background-color: #FFFFFF;
+    color: #4C4A4F;
 }
 #contact .button-link {
-    background-color: var(--utrgv-orange);
-    color: var(--default-white);
+    background-color: #CB4900;
+    color: #FFFFFF;
     text-decoration: underline;
     border: 1px solid #999;
     box-shadow: 1px 2px 6px #999;
@@ -196,7 +194,7 @@ nav {
     justify-self: center;
 }
 #contact .button-link:hover {
-    background-color: var(--accent-orange);
+    background-color: #ff4d00;
 }
 .banner {
     width: 100%;
@@ -214,7 +212,7 @@ nav {
     position: absolute;
     height: 0.5rem;
     width: var(--underline-width);
-    background-color: var(--accent-orange);
+    background-color: #ff4d00;
     left: 0;
     bottom: -0.5rem;
 }
@@ -224,12 +222,12 @@ nav {
 }
 .divisor {
     height: 3px;
-    background-color: var(--light-grey);
+    background-color: #ededed;
 }
 .highlight {
     font-weight: 700;
-    color: var(--default-white);
-    background-color: var(--utrgv-orange);
+    color: #FFFFFF;
+    background-color: #CB4900;
     font-size: 1.5rem;
     padding: 0.3rem 0.6rem;
 }
@@ -251,7 +249,21 @@ nav {
 	white-space: nowrap !important;
 	border: 0 !important;
 }
-
+.scroll-by-background {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    margin-block: 2rem;
+}
+.brownsville {
+    background-image: url("/assets/utrgv-brownsville.jpg");
+}
+.bicycle {
+    margin-block: 5rem;
+    background-image: url("/assets/bicycle.jpg");
+}
 /* timeline */
 fieldset {
     display: flex;
@@ -283,7 +295,7 @@ input {
     top: 4px;
 }
 input:checked {
-    border: 6px solid var(--utrgv-orange);
+    border: 6px solid #CB4900;
   }
 input:hover, label:hover {
     cursor: pointer;
@@ -304,7 +316,7 @@ input:hover, label:hover {
     border-radius: 6px;
     height: 6px;
     width: 15%;
-    background-color: var(--accent-orange);
+    background-color: #ff4d00;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -314,18 +326,21 @@ input:hover, label:hover {
     width: 0.75rem;
     height: 0.75rem;
     background-color: #ff4d00;
-    border: 1px solid var(--accent-orange);
+    border: 1px solid #ff4d00;
     border-radius: 50%;
     position: absolute;
     bottom: -0.2rem;
     left: 0;
     z-index: 999;
 }
+#progress, #circle-progress {
+    transition: 275ms all linear;
+}
 #timeline-container {
     margin-block-start: 3rem;
 }
 #timeline-info {
-    background-color: var(--light-grey);
+    background-color: #ededed;
     height: auto;
     overflow: hidden;
 }
@@ -353,7 +368,7 @@ input:hover, label:hover {
 
 /* footer */
 #footercontact {
-    background-color: var(--light-grey);
+    background-color: #ededed;
 }
 footer .divisor {
     background-color: rgba(0,0,0,0.1);
