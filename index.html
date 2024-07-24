@@ -1,113 +1,303 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AASHE Mockup</title>
+        <title>UTRGV Strikes Gold for Excellence in Sustainability</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles/main.css">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
     </head>
     <body>
-        <header class="flex grey-background white-text space-between soft-shadow">
-            <div class="logo-container slash white-background"><a href="https://www.utrgv.edu/"><img src="assets/utrgv-logo.png" alt="University of Texas Rio Grande Valley logo" width="150" class="logo margin-1x"></a></div>
-            
-            <button class="margin-1x block space-between hamburger-menu" id="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </button>
+        <header>
+                <div class="logo-container slash">
+                    <a href="https://www.utrgv.edu/"><img src="assets/utrgv-logo.png" alt="UTRGV logo" width="150"></a>
+                </div>
+                <div class="menu-container">
+                    <div class="hamburger-container" id="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <p>MENU</p>
+                </div>
         </header>
-        <nav class="light-grey-background">
-            <ul class="no-bullet hide nav-links center-text flex space-between" id="nav-links">
-                <li><a href="" class="no-decor animate-link ">Home</a></li>
-                <li><a href="" class="no-decor animate-link ">About</a></li>
-                <li><a href="" class="no-decor animate-link ">Academics and Research</a></li>
-                <li><a href="" class="no-decor animate-link ">UN SDGs</a></li>
-                <li><a href="" class="no-decor animate-link ">Programs</a></li>
-                <li><a href="" class="no-decor animate-link ">Events</a></li>
-                <li><a href="" class="no-decor animate-link ">Resources and Guides</a></li>
-                <li><a href="" class="no-decor animate-link ">Sustainability Fellowships</a></li>
-                <li><a href="" class="no-decor animate-link ">News</a></li>
-            </ul> 
+        <nav>
+            <ul id="dropdown-menu" class="hidden">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Academics and Research</a></li>
+                <li><a href="">UN SDGs</a></li>
+                <li><a href="">Programs</a></li>
+                <li><a href="">Events</a></li>
+                <li><a href="">Guides and Resources</a></li>
+                <li><a href="">Sustainability Fellowships</a></li>
+                <li><a href="">News</a></li>
+            </ul>
         </nav>
-        <main>
-            <img src="assets/aashe-banner.jpeg" class="banner">
-            <article>
-                <p class="subtitle">2023 Ratings Are In</p>
-                <h1>UTRGV Strikes Gold for Excellence in Sustainability</h1>
-                <img src="assets/gold-banner.png" class="banner frame" loading="lazy">
-                <p>The University of Texas Rio Grande Valley is the first in the UT System and one of only three universities in Texas to earn AASHE STARS “Gold” status for its sustainability initiatives.
-                    <a href="" class="blue-text">Read more here</a>.
-                </p>
-            </article>
-            <div class="divisor"></div>
-            <article id="stars-overview">
-                <div>
-                <p class="subtitle">Measuring Sustainability on Campus</p>
-                <h1>What is STARS?</h1>
+        <main aria-label="main-content">
+            <!-- <img src="assets/top-banner.jpg" class="banner"> -->
+            <section id="viewReport" class="accent-section flex-c center-vertical">
+                <h1>2023 AASHEE Report</h1>
+                <div class="flex self-center-vertical space-evenly full-w">
+                    <a href="https://reports.aashe.org/institutions/university-of-texas-rio-grande-valley-tx/report/" class="button-link">View Past Reports</a><a href="https://reports.aashe.org/institutions/university-of-texas-rio-grande-valley-tx/report/2023-01-10/" class="button-link">2023 Report</a>
+                </div>
+            </section>
+            <img src="assets/gold-banner.png" alt="UTRGV Strikes GOLD for Excellence in Sustainability" class="banner">
+            <section id="news">
+                <div class="width34">
+                    <p>The University of Texas Rio Grande Valley is the first in the UT System and one of only three universities in Texas to earn AASHE STARS “Gold” status for its sustainability initiatives. 
+                        <a href="https://www.utrgv.edu/newsroom/2023/06/23/utrgv-earns-second-gold-rating-for-campus-sustainability-practices.htm" class="blue-link">Read More here</a>.
+                    </p>
+                </div>
+                
+            </section>
+            <div class="scroll-by-background brownsville"></div>
+            <section id="STARSinfo">
+                <div class="width34">
+                    <h1 class="underline">What is STARS?</h1>
                 <p>The Sustainability Tracking, Assessment & Rating System™ (STARS ®) is a transparent, intensive, self-reporting framework for colleges and universities to measure their sustainability performance.</p>
                 <p>STARS aims to:</p>
-                <ul>
+                <ul class="disc">
                     <li>Provide a universal framework for understanding sustainability in higher education</li>
                     <li>Enable meaningful comparisons over time and across institutions</li>
                     <li>Create incentives for continual improvement</li>
                     <li>Facilitate information sharing on sustainability practices</li>
                     <li>Strengthen the campus sustainability community</li>
                 </ul>
-                <p><strong>For more information visit <a href="" class="blue-text">AASHE's website</a>.</strong></p>
+                <p><strong>For more information visit <a href="" class="blue-link">AASHE's website</a>.</strong></p>
+                <div class="stars-container">
+                    <img src="assets/AASHE-REPORTER.png" alt="AASHE Reporter emblem"><img src="assets/AASHE-BRONZE.png" alt="AASHE Bronze emblem"><img src="assets/AASHE-SILVER.png" alt="AASHE Silver emblem"><img src="assets/AASHE-GOLD.png" alt="AASHE Gold emblem"><img src="assets/AASHE-PLATINUM.png" alt="AASHE Platinum emblem">
                 </div>
-                <ul class="flex no-bullet scroll-horizontal aashe-stars space-around">
-                    <li><img src="/assets/AASHE-REPORTER.png" width="150"></li>
-                    <li><img src="/assets/AASHE-BRONZE.png" width="150"></li>
-                    <li><img src="/assets/AASHE-SILVER.png" width="150"></li>
-                    <li><img src="/assets/AASHE-GOLD.png" width="150"></li>
-                    <li><img src="/assets/AASHE-PLATINUM.png" width="150"></li>
-                </ul>
-            </article>
-            <div class="divisor"></div>
-            <article id="timeline">
-                <p class="subtitle">a proven track record of excellence</p>
-                <h1>Sustainability Progress</h1>
-                <section id="timeline">
-
-                </section>
-            </article>
-            <div class="divisor"></div>
-            <article id="highlights">
-                <h3 class="subtitle">Highlights from</h3>
-                <h1 class="title"> 2023 Sustainability Report</h1>
-                <section class="gallery-container">
-                    <div class="gallery">
-                        <div>
-                            
-                            <span>%Academics</span>
-                        </div>
-                        <div>
-                            
-                            <span>%Engagement</span>
-                        </div>
-                        <div>
-                            
-                            <span>%Operations</span>
-                        </div>
-                        <div>
-                            
-                            <span>%Planning & Administration</span>
-                        </div>
-                        <div>
-                            
-                            <span>%Research</span>
+                </div>
+                
+            </section>
+            <div class="divisor width34"></div>
+            <section id="timeline">
+                <div class="width34">
+                    <h1 class="underline">Sustainability Progress</h1>
+                    <div class="overlap">
+                        <fieldset>
+                            <legend><h3>A proven track record of excellence</h3></legend>
+                            <div>
+                                <input type="radio" id="2015" value="2015" name="year" >
+                                <label for="2015"> 2015</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="2018" value="2018" name="year" >
+                                <label for="2018"> 2018</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="2023" value="2023" name="year"  checked>
+                                <label for="2023"> 2023</label>
+                            </div>
+                        </fieldset>
+                        <div id="progress-bar">
+                            <div id="circle-progress"></div>
+                            <div id="progress"></div>
                         </div>
                     </div>
-                </section>
-            </article>
-            <article class="card" id="connect">
-                <h1>Questions or comments?</h1>
-                <p>
-                    We invite you to Contact OFS for any questions and to Connect with us through Social Media
-                </p>
-                <button class="orange-background round connect white-text"><a href="">Connect with OFS</a></button>
-            </article>
+                    
+                </div>
+                <div id="timeline-container">
+                    
+                    <div id="timeline-info">
+                        <div data-year="2015" class="hidden timeline-slide">
+                            <h3>STARS Version 2.0</h3>
+                            <img src="assets/AASHE-SILVER.png" alt="AASHE Silver rating emblem" width="225">
+                            
+                            <p> Needs blurb <a href="" class="blue-link">View 2015 report</a></p>
+                        </div>
+                        <div data-year="2018" class="hidden timeline-slide">
+                            <h3>STARS Version 2.1</h3>
+                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="225">
+                            <p> Needs blurb <a href="https://issuu.com/officeforsustainability/docs/final_sust_report_2018_small_digita" class="blue-link">View 2018 report</a> </p>
+                        </div>
+                        <div data-year="2023" class="timeline-slide">
+                            <h3>STARS Version 2.2</h3>
+                            <img src="assets/AASHE-GOLD.png" alt="AASHE Gold rating emblem" width="225">
+                            <p class="center">Our newest <a href="" class="blue-link">2023 report</a> puts us at a <span class="emphasis">repeat Gold STARS rating twice in a row.</span></p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="scroll-by-background bicycle"></div>
+                <div class="width34">
+                    <p>Needs blurb about university efforts to improve sustainability.</p>
+                    <p>Each report includes scores in: Academics, Engagement, Operations, Planning and Administration, and Innovation and Leadership.</p>
+                </div>
+            </section>
+            <div class="divisor width34"></div>
+            <section id="highlights">
+                <div class="width34">
+                    <h1 class="underline">Our STARS 2.2 Report</h1>
+                    <h3 class="center">Highlights from our 2023 AASHE report.</h3>
+
+                    <h3 class="center"> <span class="highlight">88%</span></h3>
+                    <p class="center upper strong"> In academics </p>
+                    <p class="center">UTRGV's commitment to sustainability is ingrained in every academic department. Each field offers at least one course focused on embracing sustainability principles.</p>
+
+                    <h3 class="center"> <span class="highlight">97%</span> </h3>
+                    <p class="center upper strong"> In Engagement </p>
+                    <p class="center">needs blurb </p>
+
+                    <h3 class="center"> <span class="highlight">63%</span> </h3>
+                    <p class="center upper strong"> In Operations </p>
+                    <p class="center"> needs blurb</p>
+
+                    <h3 class="center"> <span class="highlight">65%</span> </h3>
+                    <p class="center upper strong"> In Planning and Administration </p>
+                    <p class="center"> needs blurb</p>
+
+                    <h3 class="center"> <span class="highlight">100%</span> </h3>
+                    <p class="center upper strong"> In Innovation and Leadership </p>
+                    <p class="center"> needs blurb </p>
+                </div>
+            </section>
+            <div class="divisor"></div>
+            <section id="contact" class="width34">
+                <h1 class="underline"> Questions or Comments? </h1>
+                <p>We invite you to Contact OFS for any questions and to Connect with us through Social Media.</p>
+                <a href="https://www.utrgv.edu/sustainability/about/connect-with-ofs/index.htm" class="button-link">Connect with OFS</a>
+            </section>
         </main>
-        <script src="script.js"></script>
+        <footer>
+            <section id="footercontact">
+                <div class="width34">
+                    <div class="contact-location">
+                        <h3>Office for Sustainability</h3>
+                        <div class="divisor"></div>
+                        <div class="hours">
+                            <div class="edinburg">
+                                <h3>Edinburg</h3>
+                                <ul>
+                                    <li>Building: EINNV 1.118</li>
+                                    <li>Phone: 956-665-3030</li>
+                                    <li>Email: <a href="mailto:sustainability@utrgv.edu" class="blue-link">sustainability@utrgv.edu</a></li>
+                                </ul>
+                            </div>
+                            <div class="hours-info">
+                                <h3>Hours</h3>
+                                <p>Monday-Friday</p>
+                                <p>8:00 AM - 5:00 PM CST</p>
+                            </div>
+                    </div>
+                        </div>
+                        <div class="contact-options">
+                            <h3>Connect with OFS on Social Media</h3>
+                            <div class="divisor"></div>
+                            <div class="follow">
+                                <p>like.follow.subscribe</p>
+                                <div class="media-icons">
+                                    <a aria-label="Follow us on Facebook, opens in a new window" class="text-center d-flex text-dark mx-1" href="https://www.facebook.com/UTRGVSustainability/" target="_blank">
+                                        <svg alt="Follow us on Facebook" title="Follow us on Facebook" aria-labelledby="svg-inline--fa-title-kNO8ytxcEETg" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><title id="svg-inline--fa-title-kNO8ytxcEETg">Follow us on Facebook</title><path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg><!-- <i alt="Follow us on Facebook" class="fab fa-facebook-square" title="Follow us on Facebook"></i> -->
+                                    </a>
+                                    <a aria-label="Follow us on Instagram, opens in a new window" class="text-center d-flex text-dark mx-1" href="https://www.instagram.com/ofs_utrgv/" target="_blank">
+                                        <svg alt="Follow us on Instagram" title="Follow us on Instagram" aria-labelledby="svg-inline--fa-title-AlLPU5D5abZD" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><title id="svg-inline--fa-title-AlLPU5D5abZD">Follow us on Instagram</title><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i alt="Follow us on Instagram" class="fab fa-instagram" title="Follow us on Instagram"></i> -->
+                                    </a>
+                                    <a aria-label="Follow us on Youtube, opens in a new window" class="text-center d-flex text-dark mx-1" href="https://www.youtube.com/channel/UCkk57Fshay722U8uTEvuH2Q" target="_blank">
+                                        <svg alt="Follow us on Youtube" title="Follow us on Youtube" aria-labelledby="svg-inline--fa-title-b0MhNgZpy6CE" data-prefix="fab" data-icon="youtube-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><title id="svg-inline--fa-title-b0MhNgZpy6CE">Follow us on Youtube</title><path fill="currentColor" d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z"></path></svg><!-- <i alt="Follow us on Youtube" class="fab fa-youtube-square" title="Follow us on Youtube"></i> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </footer>
+        <script>
+            function changeWidth(newWidth, radioSize, i, calledBy) {
+                if (arguments.length == 3) {
+                    calledBy = 'resize';
+                }
+                let p = document.getElementById('progress'), c = document.getElementById('circle-progress');
+                if (calledBy === 'resize') {
+                    calculatedWidth = newWidth * (i + 1) + radioSize * i;
+                } else {
+                    calculatedWidth = newWidth * (i - 1) + radioSize * (i - 1) + newWidth;
+                }
+                p.style.width = calculatedWidth + 'px';
+                c.style.left = (calculatedWidth - Math.floor(c.clientWidth)) + 'px';
+            }
+            function getSpaceBetweenRadio(r) {
+                let radio1 = r[0].getBoundingClientRect(), radio2 = r[1].getBoundingClientRect();
+                return Math.ceil(radio2.left - radio1.right);
+            }
+            function matchSlidetoRadio(rID) {
+                let slides = Array.from(document.querySelectorAll('.timeline-slide'));
+                slides.forEach((slide) => {
+                    if (rID == slide.getAttribute('data-year')) {
+                        slide.classList.remove('hidden');
+                    }
+                    else {
+                        slide.classList.add('hidden');
+                    }
+                });
+            }
+            function getTextWidth(str) { 
+                text = document.createElement("h1"); 
+                document.body.appendChild(text); 
+            
+                text.style.height = 'auto'; 
+                text.style.width = 'auto'; 
+                text.style.position = 'absolute'; 
+                text.style.whiteSpace = 'no-wrap'; 
+                text.innerHTML = str; 
+            
+                width = Math.ceil(text.clientWidth); 
+                formattedWidth = width + "px"; 
+            
+                document.body.removeChild(text);
+                return formattedWidth;
+    }
+
+            function changeUnderline () {
+                let underlinedText = document.querySelectorAll('.underline');
+                underlinedText.forEach(underline => {
+                    let textWidth = getTextWidth(underline.textContent);
+                    console.log(underline.textContent + ' = ' + textWidth);
+                    let underlineStyle = window.getComputedStyle(underline);
+                    let underlineAfter = underlineStyle.getPropertyValue('width', 'after');
+                    underline.style.setProperty('--underline-width', textWidth)
+                })
+            }
+            function preventTransition (id) {
+                document.getElementById(id).style.transition = "none";
+                    setTimeout(function(){
+                document.getElementById(id).style.transition = "270ms all linear";
+                }, 700);
+            }
+            window.addEventListener("DOMContentLoaded", () => {
+                const radio = Array.from(document.querySelectorAll('input[type=radio]'));
+                let radioSize = radio[0].getBoundingClientRect().right - radio[0].getBoundingClientRect().left;
+                let w = getSpaceBetweenRadio(radio);
+                changeWidth(w, radioSize, 2);
+                let currentIteration;
+
+                changeUnderline();
+                
+                radio.forEach((r, index) => {
+                    
+                    r.addEventListener('change', () =>{
+                        let id = r.getAttribute('id');
+                        changeWidth(w, radioSize, index + 1, 'notResize');
+                        currentIteration = index;
+                        matchSlidetoRadio(id);
+                    });
+                });
+
+                const hamburger = document.getElementById("hamburger");
+                const dropdown = document.getElementById("dropdown-menu");
+                hamburger.addEventListener(('click'), ()=> {
+                    dropdown.classList.toggle('hidden');
+                    hamburger.classList.toggle('menu-expanded');
+                })
+                
+                window.addEventListener('resize', ()=>{
+                    w = getSpaceBetweenRadio(radio);
+                    changeWidth(w, radioSize, currentIteration);
+                    preventTransition("progress");
+                    preventTransition("circle-progress");
+
+                });
+});
+        </script>
     </body>
 </html>
